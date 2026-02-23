@@ -20,8 +20,8 @@ const ValueSection = () => {
           className="text-center mb-20"
         >
           <div className="inline-block px-4 py-1.5 bg-slate-800 border border-emerald-500/30 rounded-full mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
-              Our Ethos
+            <span className="text-[8px] md:text-xs font-bold uppercase tracking-widest text-emerald-400">
+              Our Ethics
             </span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-white">Core Values</h2>
