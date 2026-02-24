@@ -11,8 +11,7 @@ const VisionMissionSection = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage:
-              'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
             backgroundSize: '40px 40px',
           }}
         />
@@ -46,8 +45,7 @@ const VisionMissionSection = () => {
                 <span className="font-bold italic bg-gradient-to-r from-amber-300 to-amber-400 bg-clip-text text-transparent">
                   trusted African group
                 </span>{' '}
-                recognized for innovation, integrity, and sustainable value
-                creation.
+                recognized for innovation, integrity, and sustainable value creation.
               </h2>
             </div>
           </motion.div>
@@ -70,9 +68,8 @@ const VisionMissionSection = () => {
               </div>
 
               <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light">
-                To build and manage diversified businesses that deliver
-                professional services, leverage innovation, and contribute
-                positively to economic development.
+                To build and manage diversified businesses that deliver professional services,
+                leverage innovation, and contribute positively to economic development.
               </p>
             </div>
           </motion.div>

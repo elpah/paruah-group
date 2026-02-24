@@ -4,12 +4,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { X, Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const NAV_HEIGHT = 80;
-
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const navItems = [
+    {
+      label: 'Home',
+      href: '#',
+    },
+    ...NAV_LINKS,
+  ];
   useEffect(() => {
     const handleScroll = () => {
       if (!mobileMenuOpen) {
@@ -55,13 +59,20 @@ const Navigation = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-10">
-          {NAV_LINKS.map(link => (
-            <li key={link.name}>
+          {navItems.map(link => (
+            <li key={link.label}>
               <a
                 href={link.href}
+                onClick={e => {
+                  e.preventDefault();
+                  const target = document.querySelector(link.href);
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
                 className="text-slate-300 hover:text-white text-sm font-medium tracking-wide transition-colors relative group"
               >
-                {link.name}
+                {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full" />
               </a>
             </li>
@@ -94,17 +105,23 @@ const Navigation = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            style={{ top: NAV_HEIGHT }}
-            className="fixed left-0 right-0 bottom-0 z-40 bg-slate-950 flex flex-col items-center justify-center gap-8 md:hidden"
+            className="fixed left-0 right-0 h-screen bottom-0 top-20 z-40 bg-slate-950 flex flex-col items-center justify-center gap-8 md:hidden"
           >
-            {NAV_LINKS.map(link => (
-              <li key={link.name}>
+            {[...NAV_LINKS].map(link => (
+              <li key={link.label}>
                 <a
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={e => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.href);
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    setMobileMenuOpen(false);
+                  }}
                   className="text-3xl font-bold text-white hover:text-amber-500 transition-colors"
                 >
-                  {link.name}
+                  {link.label}
                 </a>
               </li>
             ))}

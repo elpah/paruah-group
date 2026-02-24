@@ -1,4 +1,7 @@
 import { Theme } from './settings/types';
+import MainPage from './pages/MainPage';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 const theme: Theme = 'dark';
 
@@ -15,6 +18,11 @@ function App() {
 
   return (
     <div className="app-container">
+      <Navigation />
+      <div className="content">
+        <MainPage />
+      </div>
+      <Footer />
     </div>
   );
 }

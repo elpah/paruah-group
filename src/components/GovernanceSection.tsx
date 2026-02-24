@@ -6,7 +6,7 @@ const GovernanceSection = () => {
     <section id="governance" className="py-32 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-20 items-center">
         <div>
-          <div className="inline-block px-4 py-1 bg-slate-900 border border-amber-500/30 rounded-full mb-4 shadow-sm">
+          <div className="inline-block px-4 py-1  bg-amber-500/10 border border-amber-500/30 rounded-full mb-4 shadow-sm">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
               Corporate Standards
             </span>

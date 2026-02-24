@@ -88,7 +88,7 @@ const PortfolioSection = () => {
     <section id="portfolio" className=" bg-slate-900/50 relative">
       <div className="container mx-auto px-6 max-w-7xl py-32">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-1.5 bg-slate-900 border border-amber-500/30 rounded-full mb-6 shadow-sm">
+          <div className="inline-block px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full mb-6 shadow-sm">
             <span className="text-amber-500 font-bold uppercase tracking-widest  text-[8px] md:text-xs  block">
               Our Subsidiaries
             </span>
