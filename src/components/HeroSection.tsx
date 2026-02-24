@@ -17,7 +17,7 @@ const HeroSection = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/40 to-slate-950 z-10" />
         <img
-          src="/cover_image.webp"
+          src="/cover_image.avif"
           className="w-full h-full object-cover opacity-60 scale-105"
           alt="Modern Architecture"
         />
